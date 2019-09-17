@@ -1,0 +1,24 @@
+{
+  "name": "meteor-hero",
+  "version": "0.0.1",
+  "description": "Deploy meteor apps with one command using heroku (https://heroku.com)",
+  "repository": "https://github.com/jkrup/meteor-hero",
+  "main": "index.js",
+  "bin": "./index.js",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "del": "^5.1.0",
+    "dotenv": "^8.1.0",
+    "tar": "^4.4.10",
+    "yargs": "^14.0.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Justin Krup",
+  "license": "MIT"
+}
