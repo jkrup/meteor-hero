@@ -1,7 +1,9 @@
-[Screenshot should go here]
-
 # Meteor Hero
 *meteor-hero* is a tool to instantly deploy MeteorJS applications for free with one command utilizing Heroku's service. Just run `meteor-hero` and instantly deploy your Meteor app like you could back in the good 'ol days of `meteor deploy`.
+
+<p align="center">
+  <img alt="Screenshot of meteor-hero" src="https://github.com/jkrup/meteor-hero/raw/master/assets/mhero.png">
+</p>
 
 # Install
 
