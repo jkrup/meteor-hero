@@ -2,13 +2,22 @@
 *meteor-hero* is a tool to instantly deploy MeteorJS applications for free with one command utilizing Heroku's service. Just run `meteor-hero` and instantly deploy your Meteor app like you could back in the good 'ol days of `meteor deploy`.
 
 <p align="center">
-  <img alt="Screenshot of meteor-hero" src="https://github.com/jkrup/meteor-hero/raw/master/assets/mhero.png">
+  <img alt="Screenshot of meteor-hero" src="https://meteorhero.com/img/meteor-hero-intro.gif">
 </p>
 
 # Install
 
 ## Prerequisites
 
+### Docker
+You'll need Docker installed and running to use `meteor-hero`: https://docs.docker.com/install/
+
+Via Homebrew:
+```
+brew install docker
+```
+
+### Heroku
 Install heroku's CLI tool: https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 
 Via Homebrew:
@@ -17,6 +26,7 @@ Via Homebrew:
 brew tap heroku/brew && brew install heroku
 ```
 
+### Meteor-Hero
 And then install `meteor-hero` via NPM:
 
 
