@@ -60,7 +60,8 @@ This program is designed to be run inside of a MeteorJS project and will do the 
     -E `FILE`          Env file to be read for environment variables to be set.
 
   Commands:
-          []  By default deploys a MeteorJS application to heroku.
+    []  By default deploys a MeteorJS application to heroku.
+    -u  Update instead of creating a new url, update the previous deploy. The file .heroku_app_name must exist and contain the previous app name.
 
   Examples:
 

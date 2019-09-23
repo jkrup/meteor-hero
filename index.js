@@ -199,7 +199,8 @@ function help () {
   )}              Env file to be read for environment variables to be set.
 
   ${grey(`Commands:`)}
-          []  By default deploys a MeteorJS application to heroku.
+    []  By default deploys a MeteorJS application to heroku.
+    -u  Update instead of creating a new url, update the previous deploy. The file .heroku_app_name must exist and contain the previous app name.
 
   ${grey(`Examples:`)}
 
