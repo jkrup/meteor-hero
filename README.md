@@ -9,6 +9,15 @@
 
 ## Prerequisites
 
+### Docker
+You'll need Docker installed and running to use `meteor-hero`: https://docs.docker.com/install/
+
+Via Homebrew:
+```
+brew install docker
+```
+
+### Heroku
 Install heroku's CLI tool: https://devcenter.heroku.com/articles/heroku-cli#download-and-install
 
 Via Homebrew:
@@ -17,6 +26,7 @@ Via Homebrew:
 brew tap heroku/brew && brew install heroku
 ```
 
+### Meteor-Hero
 And then install `meteor-hero` via NPM:
 
 
