@@ -32,6 +32,9 @@ function help () {
     -E ${bold.underline(
     `FILE`
   )}              Env file to be read for environment variables to be set.
+    -s ${bold.underline(
+    `FILE`
+  )}              Meteor settings file to be set as METEOR_SETTINGS environment variable
 
   ${grey(`Commands:`)}
     []  By default deploys a MeteorJS application to heroku.
@@ -49,6 +52,9 @@ function help () {
 
     ${cyan(`$ meteor-hero -E prod.env`)}
 
+  ${grey(`–`)} Deploy with Meteor settings file
+
+    ${cyan(`$ meteor-hero -s settings.json`)}
 `)
   // .slice(1, -1)
 }

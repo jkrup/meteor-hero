@@ -3,6 +3,13 @@
 const delMock = jest.fn()
 jest.doMock('del', () => delMock)
 jest.doMock('os', () => ({ homedir: () => '$HOMEDIR' }))
+jest.doMock('child_process', () => ({ execSync: (_) =>
+  `{
+    "a": {
+      "b": 1
+    }
+  }`
+}));
 
 process.argv = [ 'node', 'meteor-hero', '-e', 'something', '-e', 'anotherarg' ]
 
@@ -12,7 +19,8 @@ const {
   logger,
   objToEnvStr,
   meteorBuildDir,
-  clearBuildFolder
+  clearBuildFolder,
+  getMeteorSettingsAsString,
 } = require('./helpers')
 
 it('args', () => {
@@ -63,3 +71,9 @@ describe('meteorBuildDir', () => {
   })
 })
 
+describe('getMeteorSettingsAsString', () => {
+  it('trims line breaks and wraps in single quotes', () => {
+    console.log(getMeteorSettingsAsString());
+    expect(getMeteorSettingsAsString()).toBe(`'{    \"a\": {      \"b\": 1    }  }'`);
+  })
+})

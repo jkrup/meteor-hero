@@ -1,3 +1,4 @@
+const { execSync } = require('child_process')
 const os = require('os')
 const yargs = require('yargs')
 const del = require('del')
@@ -43,10 +44,18 @@ function explain (explanation) {
   process.exit(1)
 }
 
+function getMeteorSettingsAsString(fileName) {
+  // Remove all line breaks
+  const json = execSync(`cat ${fileName}`).toString().trim().replace(/\t|\r?\n|\r/g, "");
+  // Wrap in quotes so JSON string can work with heroku config:set
+  return `'${json}'`;
+}
+
 module.exports = {
   args,
   clearBuildFolder,
   explain,
+  getMeteorSettingsAsString,
   logger,
   meteorBuildDir,
   objToEnvStr
