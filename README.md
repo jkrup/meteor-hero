@@ -68,6 +68,7 @@ This program is designed to be run inside of a MeteorJS project and will do the 
     -b DIR             Overwrite BUILD_DIR
     -e VAR=value       Environment variables to set on the deployed heroku instance.
     -E `FILE`          Env file to be read for environment variables to be set.
+    -s `FILE`          Meteor settings file to be set as METEOR_SETTINGS environment variable.
 
   Commands:
     []  By default deploys a MeteorJS application to heroku.
@@ -82,4 +83,8 @@ This program is designed to be run inside of a MeteorJS project and will do the 
   – Deploy using env file
 
     $ meteor-hero -E prod.env
+
+  – Deploy with Meteor settings file
+
+    $ meteor-hero -s settings.json
 ```

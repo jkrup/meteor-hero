@@ -1,7 +1,7 @@
 const fs = require('fs')
 const tar = require('tar')
 const { execSync } = require('child_process')
-const { explain, meteorBuildDir, logger, objToEnvStr, clearBuildFolder } = require('../helpers')
+const { explain, meteorBuildDir, logger, objToEnvStr, clearBuildFolder, getMeteorSettingsAsString } = require('../helpers')
 const { herokuCreate } = require('../commandHelpers')
 const dockerFile = require('../dockerfile')
 const dotenv = require('dotenv')
@@ -80,9 +80,15 @@ function getCustomEnv (args) {
       )
     : {}
 
+  // Meteor settings
+  const meteorSettings = args['s']
+    ? { METEOR_SETTINGS: getMeteorSettingsAsString(args['s']) }
+    : {};
+
   return {
     ...envFileEnv,
-    ...envArgsEnv
+    ...envArgsEnv,
+    ...meteorSettings
   }
 }
 
