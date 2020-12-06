@@ -5,6 +5,7 @@ const { yellow, bold, green, grey } = require('chalk')
 
 const logger = {
   info: console.log,
+  error: console.error
   success: msg => console.log(green(msg))
 }
 
